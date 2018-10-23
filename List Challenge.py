@@ -123,6 +123,7 @@ def combine_sort(lst1, lst2):
 print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
 
 #9. Append Size
+#There are other ways to do this. May belater revisit this and try it without using the for loop and using range correctly, range (start, stop, step)
 #Write your function here
 def append_size(lst):
   for x in range(len(lst)):
