@@ -81,3 +81,18 @@ def middle_element(lst):
     
 #Uncomment the line below when your function is done
 print(middle_element([5, 2, -10, -4, 4, 5]))
+
+#6.Append Sum
+#Write your function here
+def append_sum(lst):
+  last_two_added = lst[-1] + lst[-2]
+  appending_sum1 = lst.append(last_two_added)
+  last_two_added = lst[-1] + lst[-2]
+  appending_sum2 = lst.append(last_two_added)
+  last_two_added = lst[-1] + lst[-2]
+  appending_sum3 = lst.append(last_two_added)
+
+  return lst
+
+#Uncomment the line below when your function is done
+print(append_sum([1, 1, 2]))
