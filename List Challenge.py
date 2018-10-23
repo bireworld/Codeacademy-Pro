@@ -17,3 +17,21 @@ def double_index(lst, index):
 print(double_index([3, 8, -10, 12], 2))
 print('\n')
 print(double_index([3, 8, -10, 12], 5))
+
+#2.Remove Middle
+#Write your function here
+#solution 1 using del
+def sol1_remove_middle(lst, start, end):
+  del lst[start:end+1]
+  return lst
+  
+#solution 2 slicing the list and then combining it
+def sol2_remove_middle(lst, start, end):
+  lst1 = lst[:start]
+  lst2 = lst[end+1:]
+  new_lst = lst1+lst2
+  return new_lst
+
+#Uncomment the line below when your function is done
+print(sol1_remove_middle([4, 8, 15, 16, 23, 42], 1, 3))
+print(sol2_remove_middle([4, 8, 15, 16, 23, 42], 1, 3))
