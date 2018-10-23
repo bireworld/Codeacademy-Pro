@@ -1,4 +1,5 @@
 #CODE CHALLENGE: Lists
+#1.Double Index
 #Write your function here
 def double_index(lst, index):
   if index >= len(lst):
@@ -35,3 +36,14 @@ def sol2_remove_middle(lst, start, end):
 #Uncomment the line below when your function is done
 print(sol1_remove_middle([4, 8, 15, 16, 23, 42], 1, 3))
 print(sol2_remove_middle([4, 8, 15, 16, 23, 42], 1, 3))
+
+#3.More than N
+#Write your function here
+def more_than_n(lst, item, n):
+  if lst.count(item) > n:
+    return True
+  else:
+    return False
+
+#Uncomment the line below when your function is done
+print(more_than_n([2, 4, 6, 2, 3, 2, 1, 2], 2, 3))
