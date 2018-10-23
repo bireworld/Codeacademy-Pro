@@ -96,3 +96,18 @@ def append_sum(lst):
 
 #Uncomment the line below when your function is done
 print(append_sum([1, 1, 2]))
+
+
+#7. Larger List
+#Write your function here
+def larger_list(lst1, lst2):
+  len_lst1 = len(lst1)
+  len_lst2 = len(lst2)
+
+  if len_lst2 > len_lst1:
+    return lst2[-1]
+  else:
+    return lst1[-1]
+
+#Uncomment the line below when your function is done
+print(larger_list([4, 10, 2, 5], [-10, 2, 5, 10]))
