@@ -123,7 +123,10 @@ def combine_sort(lst1, lst2):
 print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
 
 #9. Append Size
-#There are other ways to do this. May belater revisit this and try it without using the for loop and using range correctly, range (start, stop, step)
+#Another way to do it
+#def append_size(lst):
+#  new_lst = list(range(1,4))
+#  return lst+new_lst
 #Write your function here
 def append_size(lst):
   for x in range(len(lst)):
@@ -132,3 +135,12 @@ def append_size(lst):
 
 #Uncomment the line below when your function is done
 print(append_size([23, 42, 108]))
+
+#10. Every Three Nums
+#Write your function here
+def every_three_nums(start):
+  new_lst = list(range(start, 101, 3))
+  return new_lst
+
+#Uncomment the line below when your function is done
+print(every_three_nums(91))
