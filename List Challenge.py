@@ -111,3 +111,13 @@ def larger_list(lst1, lst2):
 
 #Uncomment the line below when your function is done
 print(larger_list([4, 10, 2, 5], [-10, 2, 5, 10]))
+
+#8. Combine Sort
+#Write your function here
+def combine_sort(lst1, lst2):
+  combine_lst = lst1 + lst2
+  combine_lst.sort()
+  return combine_lst
+
+#Uncomment the line below when your function is done
+print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
