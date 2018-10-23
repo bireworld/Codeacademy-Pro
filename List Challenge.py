@@ -121,3 +121,13 @@ def combine_sort(lst1, lst2):
 
 #Uncomment the line below when your function is done
 print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
+
+#9. Append Size
+#Write your function here
+def append_size(lst):
+  for x in range(len(lst)):
+    lst.append(x+1)
+  return lst
+
+#Uncomment the line below when your function is done
+print(append_size([23, 42, 108]))
