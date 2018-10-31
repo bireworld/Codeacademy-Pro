@@ -53,4 +53,34 @@ add_attraction("São Paulo, Brazil", ["Pátio do Colégio", ["historical site"]]
 add_attraction("Cairo, Egypt", ["Pyramids of Giza", ["monument", "historical site"]])
 add_attraction("Cairo, Egypt", ["Egyptian Museum", ["museum"]])
 
-#FINDING THE BEST PLACES TO GO
+#FINDING THE BEST PLACES TO GO BASED ON INTEREST
+def find_attractions(destination, interests):
+    destination_index = get_destination_index(destination)
+    attractions_in_city = attractions[destination_index]
+    #print("length of attractions_in_city: " + str(len(attractions_in_city)))
+    attractions_with_interest = []
+    for possible_attraction in range(len(attractions_in_city)):
+        attraction = attractions_in_city[possible_attraction]
+        attraction_tags = attractions_in_city[possible_attraction][1]
+        #print("Stored in attraction_tags at index " +str(possible_attraction)+": " + str(attraction_tags))
+        for interest in interests:
+            if interest in attraction_tags:
+                attractions_with_interest.append(attraction[0])
+    return attractions_with_interest
+#testing function find_attractions
+la_arts = find_attractions("Los Angeles, USA", ['art','beach'])
+#print("Based on your interest(s), I recommend: "+ str(la_arts))
+
+#SEE THE PARTS OF A CITY YOU WANT TO SEE
+def get_attractions_for_traveler(traveler):
+    traveler_destination = traveler[1]
+    traveler_interests = traveler[2]
+    traveler_attractions = find_attractions(traveler_destination, traveler_interests)
+    interests_string = "Hi " + traveler[0] + ", we think you'll like these places around " +traveler_destination+ ":\n"
+
+    for places_to_go in traveler_attractions:
+        interests_string += "-" + places_to_go +"\n"
+    return interests_string
+
+smills_france = get_attractions_for_traveler(['Dereck Smill', 'Paris, France', ['monument', 'art']])
+print(smills_france)
