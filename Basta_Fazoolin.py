@@ -1,4 +1,4 @@
-class Menu ():
+class Menu:
   def __init__(self, name, items, start_time, end_time):
     self.name = name
     self.items = items
@@ -15,7 +15,7 @@ class Menu ():
         bill += self.items[purchased_item]
     return bill
 
-class Franchise ():
+class Franchise:
   def __init__(self, address, menus):
     self.address = address
     self.menus = menus
@@ -30,7 +30,7 @@ class Franchise ():
         available_menu.append(menu)
     return available_menu
   
-class Business():
+class Business:
   def __init__(self, name, franchises):
     self.name = name
     self.franchises = franchises
